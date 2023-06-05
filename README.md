@@ -1,6 +1,5 @@
 # Mind-Diary
 
-![Mind-Diary Logo](path/to/logo.png)
 
 Welcome to Mind-Diary, your quirky yet professional companion for tracking daily sentiments and monitoring overall health. This innovative project combines audio input, NLP wizardry, video analysis, and Haar cascades to create a personalized daily log that keeps your doctor up-to-date with your emotional well-being.
 
