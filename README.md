@@ -34,6 +34,6 @@ Mind-Diary is released under the MIT License.
 We would like to thank the open-source community for their incredible contributions, which have made Mind-Diary possible.
 
 ## Contact
-If you have any questions or feedback, feel free to reach out to our team at contact@mind-diary.com. We'd love to hear from you!
+If you have any questions or feedback, feel free to reach out to our team at ojasfarm31@gmail.com. We'd love to hear from you!
 
 Remember, it's your Mind-Diary—because your mind matters! 🌟
