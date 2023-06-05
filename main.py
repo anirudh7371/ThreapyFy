@@ -41,6 +41,9 @@ db = firebase.database()
 storage = firebase.storage()
 
 
+@st.cache_data
+def convert_df(df):
+    return df.to_csv().encode('utf-8')
 
 def load_lottie_url(url: str):
     r = requests.get(url)
@@ -126,22 +129,18 @@ if choice == "Login":
     if login:
         try:
             user = auth.sign_in_with_email_and_password(email, password)
-            # user_ref = db.reference(user['localId'])
-            # if user_ref.get() is None:
-            #     df = pd.DataFrame(
-            #         [
-            #             {"Task": "None", "Due date": "", "Completed": False},
-            #             {"Task": "None", "Due date": "", "Completed": False},
-            #             {"Task": "None", "Due date": "", "Completed": False}
-            #         ]
-            #     )
-            #     user_ref.set(df.to_dict())
-            #     data = df
-            # else:
-            #     data_dict = user_ref.get()
-            #     data = pd.DataFrame.from_dict(data_dict)
-            # edited_df = st.experimental_data_editor(data, use_container_width=True, num_rows="dynamic")
-            # csv = convert_df(edited_df)
+            st.subheader("Your Reports:")
+            df = pd.DataFrame(
+                [
+                    {"Mental State": "Neutral", "Date": "03/06/2023"},
+                    {"Mental State": "Happy", "Date": "04/06/2023"},
+                    {"Mental State": "Neutral", "Date": "05/06/2023"}
+                ]
+            )
+            edited_df = st.data_editor(df)
+
+
+
             doc_email=db.child(user['localId']).child("Handle").get().val()
             st.sidebar.success("You have Logged in Successfully!")
             st.subheader("Upload your audio file:")
@@ -176,7 +175,10 @@ if choice == "Login":
                 send=st.button("Send report to doctor")
                 if send:
                     auth=st.secrets["AUTH_TOKEN"]
-                    succ=send_email(doc_email,report,auth)
+                    try:
+                        succ=send_email(doc_email,report,auth)
+                    except:
+                        st.info("Oops! Something went wrong. Please try again later.")
                     if succ:
                         st.success("Report sent successfully!")
         except Exception as e:
