@@ -2,6 +2,9 @@
 
 
 Welcome to Mind-Diary, your quirky yet professional companion for tracking daily sentiments and monitoring overall health. This innovative project combines audio input, NLP wizardry, video analysis, and Haar cascades to create a personalized daily log that keeps your doctor up-to-date with your emotional well-being.
+![image](https://github.com/OjasMittal/Mind-Diary/assets/93815296/da83fb73-c045-480a-b0b9-25496349633a)
+![image](https://github.com/OjasMittal/Mind-Diary/assets/93815296/a46a2717-581c-42f7-a4ea-11ac3c941fd0)
+
 
 ## Features
 - **Audio Input**: Share your thoughts, feelings, or spontaneous karaoke sessions with Mind-Diary. Our audio capturing feature lets you express yourself freely while the magic happens in the background.
