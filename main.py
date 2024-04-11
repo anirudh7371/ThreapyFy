@@ -3,18 +3,18 @@ import speech_recognition as sr
 from textblob import TextBlob
 import cv2
 from keras.models import model_from_json
-from keras.utils.image_utils import img_to_array
+from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 import numpy as np
 from pyrebase import initialize_app
 import requests
 from streamlit_lottie import st_lottie
-from emaill import send_email
+from email import send_email
 from collections import Counter
 import pandas as pd
 
 
-st.set_page_config(page_title="Mind-Diary", page_icon="img.png")
+st.set_page_config(page_title="ThearpyFy", page_icon="img.png")
 
 emotion_dict = {0:'angry', 1 :'happy', 2: 'neutral', 3:'sad', 4: 'surprise'}
 json_file = open('emotion_model1.json', 'r')
@@ -25,15 +25,14 @@ classifier.load_weights("emotion_model1.h5")
 
 api_key=st.secrets["API_KEY"]
 firebaseConfig = {
-    'apiKey': api_key,
-    'authDomain': "minddiary-ac3d8.firebaseapp.com",
-    'projectId': "minddiary-ac3d8",
-    'databaseURL': "https://minddiary-ac3d8-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    'storageBucket': "minddiary-ac3d8.appspot.com",
-    'messagingSenderId': "885725292249",
-    'appId': "1:885725292249:web:22f27b9e4f2a12e3eec0c8",
-    'measurementId': "G-WYM16NPYRN"
-}
+  apiKey: "AIzaSyAneWKgCeoXPnljwPr6_-uCqck6L5tUqDk",
+  authDomain: "thearpyfy.firebaseapp.com",
+  projectId: "thearpyfy",
+  storageBucket: "thearpyfy.appspot.com",
+  messagingSenderId: "1072598283916",
+  appId: "1:1072598283916:web:bc75eb07b0efb8f1f4ada9",
+  measurementId: "G-Z0FK0Z1ZV0"
+};
 
 firebase = initialize_app(firebaseConfig)
 auth = firebase.auth()
@@ -59,7 +58,7 @@ with col1:
     st_lottie(lottie_anime_json, key="mental")
 
 with col2:
-    st.header("🧠Mind-Diary📖")
+    st.header("🧠ThearpyFy")
 
 emotion_list=[]
 try:

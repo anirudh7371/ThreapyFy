@@ -1,0 +1,6 @@
+README.md
+setup.py
+ThearpyFy.egg-info/PKG-INFO
+ThearpyFy.egg-info/SOURCES.txt
+ThearpyFy.egg-info/dependency_links.txt
+ThearpyFy.egg-info/top_level.txt
