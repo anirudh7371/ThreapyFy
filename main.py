@@ -12,6 +12,7 @@ from streamlit_lottie import st_lottie
 from email import send_email
 from collections import Counter
 import pandas as pd
+import os
 
 
 st.set_page_config(page_title="ThearpyFy", page_icon="img.png")
@@ -24,8 +25,9 @@ classifier = model_from_json(loaded_model_json)
 classifier.load_weights("emotion_model1.h5")
 
 api_key=st.secrets["API_KEY"]
+load_dotenv()
 firebaseConfig = {
-  apiKey: "AIzaSyAneWKgCeoXPnljwPr6_-uCqck6L5tUqDk",
+  apiKey: os.environ.get("API_KEY"),
   authDomain: "thearpyfy.firebaseapp.com",
   projectId: "thearpyfy",
   storageBucket: "thearpyfy.appspot.com",
