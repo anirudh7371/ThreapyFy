@@ -35,6 +35,6 @@ ThreapyFy is released under the MIT License.
 We would like to thank the open-source community for their incredible contributions, which have made ThreapyFy possible.
 
 ## Contact
-If you have any questions or feedback, feel free to reach out to our team at ojasfarm31@gmail.com. We'd love to hear from you!
+If you have any questions or feedback, feel free to reach out to our team at anirudh7371@icloud.com. We'd love to hear from you!
 
 Remember, it's your ThreapyFy -because your mind matters! 🌟
